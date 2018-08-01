@@ -18,12 +18,6 @@ public class RoShamBoApp {
 		int userScore = 0;
 		int opponentScore = 0;
 		
-		//created the opponents
-		Mike mike = new Mike("Mike");
-		Koby koby = new Koby("Koby");
-		Lebron lebron = new Lebron("Lebron");
-		
-		
 		//print out a welcome statement and name statement to collect userName
 		System.out.println("Welcome to Rock, Paper, Scissors!");
 		System.out.println("Enter a name?");
@@ -46,19 +40,23 @@ public class RoShamBoApp {
 		System.out.println("(enter \"Mike\", \"Koby\", or \"Lebron\". Lebron is Random)");
 		opponent = scnr.nextLine();
 		
-		//based on selected opponent the correct Roshambo method is generated
-		//and sets the opponentGen to true as long as it matches
+		//based on selected opponent the correct opponent is generated, Roshambo method is generated,
+		//and sets the opponentGen to true as long as the entry matches an opponent.
 		if (opponent.equals("Mike")) {
+			
+			Mike mike = new Mike("Mike");
 			opponentChoice = mike.generateRoshambo();
 			opponentGen = true;
 			
 		} else if (opponent.equals("Koby")) {
 			
+			Koby koby = new Koby("Koby");
 			opponentChoice = koby.generateRoshambo();
 			opponentGen = true;
 			
 		}else if (opponent.equals("Lebron")) {
 			
+			Lebron lebron = new Lebron("Lebron");
 			opponentChoice = lebron.generateRoshambo();
 			opponentGen = true;
 			

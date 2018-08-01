@@ -9,7 +9,7 @@ public class Lebron extends Player{
 
 	public Roshambo generateRoshambo() {
 		
-		int random = (int) (Math.random()*3)+1;
+		int random = (int) (Math.random()*3) + 1;
 		
 		if(random == 1) {
 			return Roshambo.ROCK;
